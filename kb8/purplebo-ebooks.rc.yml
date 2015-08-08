@@ -6,15 +6,19 @@ metadata:
     facing: worker
     service: pbeb
     type: mispyebooks
-  name: pbeb-mispyebooks
+  name: pbeb-mispyebooks-v0
 spec:
   replicas: 1
   selector:
-    name: pbeb-mispyebooks
+    service: pbeb
+    type: mispyebooks
+    version: v0
   template:
     metadata:
       labels:
-        name: pbeb-mispyebooks
+        service: pbeb
+        type: mispyebooks
+        version: v0
     spec:
       containers:
         -
