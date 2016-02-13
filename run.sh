@@ -4,6 +4,8 @@ echo -e
 
 source $SECRETS_PATH
 
+ruby -e "require 'resolv' ; Resolv.getaddress \"userstream.twitter.com\""
+
 echo "{
   \"consumer_key\": \"${TWITTER_CONSUMER_KEY}\",
   \"consumer_secret\": \"${TWITTER_CONSUMER_SECRET}\",
